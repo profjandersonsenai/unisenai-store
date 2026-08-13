@@ -4,9 +4,19 @@ Passo a passo real usado para publicar o projeto no GitHub e na Vercel. Este doc
 
 ## Dados usados nesta publicação
 
-- **Conta GitHub:** _(a definir)_
-- **Nome do repositório:** _(a definir, ex: `unisenai-store`)_
-- **Conta Vercel:** _(a definir — geralmente login via "Continue with GitHub")_
+- **Conta GitHub:** `profjandersonsenai` (e-mail `janderson.s@edu.sc.senai.br`)
+- **Nome do repositório:** [`unisenai-store`](https://github.com/profjandersonsenai/unisenai-store)
+- **Conta Vercel:** "Janderson's projects" (Hobby), login via "Continue with GitHub", mesmo e-mail
+- **URL publicada:** ✅ [unisenai-store.vercel.app](https://unisenai-store.vercel.app/)
+
+### ⚠️ Problema comum: erro 403 "Permission denied" no `git push`
+
+Se o Windows já tiver uma **credencial salva de outra conta GitHub**, o `git push` falha com `403` mesmo a URL do repositório estando certa. Como resolver (Windows):
+
+1. Abra o **Gerenciador de Credenciais do Windows** (pesquisar no menu Iniciar).
+2. Vá em **Credenciais do Windows** e procure uma entrada `git:https://github.com`.
+3. Remova essa entrada (ou, via terminal: `cmdkey /delete:LegacyGeneric:target=git:https://github.com`).
+4. Rode `git push` de novo — vai abrir uma janela do navegador pedindo login no GitHub. Entre com a conta correta.
 
 ---
 

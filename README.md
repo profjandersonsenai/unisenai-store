@@ -1,5 +1,7 @@
 # UniSENAI Store — E-commerce Avançado (JavaScript)
 
+🔗 **Online:** [unisenai-store.vercel.app](https://unisenai-store.vercel.app/)
+
 Projeto de estudo da Unidade Curricular **Desenvolvimento Web**, com foco em lógica de programação avançada em JavaScript (vetores, matrizes, laços de repetição, switch/case e regex) e no fluxo de versionamento Git/GitHub + deploy contínuo na Vercel.
 
 ## Estrutura do projeto
