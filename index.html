@@ -1,0 +1,86 @@
+<!--
+    UNISENAI STORE — index.html
+    ------------------------------------------------------------
+    Estrutura (HTML) da loja. Este arquivo só define o "esqueleto"
+    da página: os textos e produtos que aparecem dinamicamente são
+    inseridos pelo JavaScript (ver js/app.js), e o visual fica todo
+    no css/style.css.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniSENAI Store - E-commerce Avançado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho fixo no topo com o logo e o resumo do carrinho -->
+    <header class="navbar">
+        <div class="logo">Uni<span class="logo-highlight">SENAI</span><span class="logo-accent"></span><span class="logo-store">Store</span></div>
+        <div class="cart-summary">
+            🛒 <span id="cart-count">0</span> itens | R$ <span id="cart-summary-total">0.00</span>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal: lista de produtos (esquerda) + carrinho (direita) -->
+    <main class="container">
+
+        <!-- Lista de Produtos -->
+        <section class="products-section">
+            <h2>Nossos Produtos</h2>
+            <!-- Os cards de cada produto são desenhados aqui pela função
+                 renderProducts() em app.js — este <div> começa vazio. -->
+            <div id="product-list" class="grid-container">
+                <!-- Injetado pelo FOR no JavaScript -->
+            </div>
+        </section>
+
+        <!-- Carrinho e Checkout -->
+        <aside class="cart-section">
+            <h2>Seu Carrinho</h2>
+
+            <!-- Itens do carrinho são desenhados aqui pela função updateCartUI() -->
+            <div id="cart-items" class="cart-items-container"></div>
+
+            <!-- Formulário de entrega: só aparece quando há itens no carrinho
+                 (controlado via JS, por isso começa com display:none) -->
+            <div class="checkout-form" id="checkout-form" style="display: none;">
+                <h3>Dados de Entrega</h3>
+
+                <label>E-mail:</label>
+                <input type="text" id="user-email" placeholder="email@exemplo.com">
+
+                <label>CEP:</label>
+                <input type="text" id="user-cep" placeholder="00000-000">
+
+                <!-- A escolha aqui decide o frete calculado via switch/case em app.js -->
+                <label>Região:</label>
+                <select id="user-region">
+                    <option value="">Selecione...</option>
+                    <option value="SUL">Sul</option>
+                    <option value="SUDESTE">Sudeste</option>
+                    <option value="CENTRO-OESTE">Centro-Oeste</option>
+                    <option value="NORDESTE">Nordeste</option>
+                    <option value="NORTE">Norte</option>
+                </select>
+
+                <p class="shipping-cost">Frete: R$ <span id="shipping-value">0.00</span></p>
+
+                <!-- Mensagens de erro/sucesso da validação do checkout aparecem aqui -->
+                <p id="form-message" class="form-message"></p>
+            </div>
+
+            <!-- Totais e ações do carrinho -->
+            <div class="cart-footer">
+                <h3>Total c/ Frete: R$ <span id="cart-total">0.00</span></h3>
+                <button id="btn-clear" class="btn-secondary">Esvaziar Carrinho</button>
+                <button id="btn-checkout" class="btn-primary" disabled>Finalizar Compra</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Toda a lógica (produtos, carrinho, frete, validações) está em app.js -->
+    <script src="js/app.js"></script>
+</body>
+</html>
