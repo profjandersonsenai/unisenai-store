@@ -1,4 +1,4 @@
-# UniSENAI Store — E-commerce Avançado (JavaScript)
+# UniSENAI Store — E-commerce (JavaScript)
 
 🔗 **Online:** [unisenai-store.vercel.app](https://unisenai-store.vercel.app/)
 
