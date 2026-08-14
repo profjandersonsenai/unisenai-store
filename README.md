@@ -7,7 +7,7 @@ Projeto de estudo da Unidade Curricular **Desenvolvimento Web**, com foco em ló
 ## Estrutura do projeto
 
 ```
-ecomerce/
+ecommerce/
 ├── index.html      # Estrutura da página (lista de produtos, carrinho, checkout)
 ├── css/
 │   └── style.css   # Estilos (layout em grid, cards de produto, carrinho lateral)
