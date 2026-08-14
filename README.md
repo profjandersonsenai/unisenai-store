@@ -61,4 +61,4 @@ Basta abrir o `index.html` diretamente no navegador (não depende de servidor/ba
 
 ---
 
-> Este README substitui o material de referência original da aula (`gemini-code-*.md`), preservando o essencial do guia como documentação viva do projeto.
+
